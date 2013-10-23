@@ -15,7 +15,9 @@
     <string name="title_activity_timeline">TimelineActivity</string>
         <string name="bt_compose_cancel">Cancel</string>
    <string name="bt_compose_tweet">Tweet</string>
-        
+   <string name="tv_compose_char_left_label"> char left</string>  
+   <string name="tv_compose_char_left">140</string>        
+   
     
     
     

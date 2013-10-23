@@ -5,11 +5,14 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -20,7 +23,8 @@ public class ComposeActivity extends Activity {
 	EditText et_compose_post_tweet;
 	Button et_compose_cancel;
 	Button et_compose_tweet;
-
+    TextView tv_compose_char_left;
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,9 +33,27 @@ public class ComposeActivity extends Activity {
 		 et_compose_post_tweet = (EditText) findViewById(R.id.et_compose_post_tweet);
 		 et_compose_cancel  = (Button) findViewById(R.id.bt_compose_cancel);
 		 et_compose_tweet  = (Button) findViewById(R.id.bt_compose_tweet);
+		 tv_compose_char_left = (TextView) findViewById(R.id.tv_compose_char_left);
 		 
-		 
-		
+		 et_compose_post_tweet.addTextChangedListener(new TextWatcher() {
+		 	@Override
+		 	public void onTextChanged(CharSequence s, int start, int before, int count) {
+		 		// Fires right as the text is being changed (even supplies the range of text)
+		 		int charLeft = 140 - et_compose_post_tweet.getText().length();
+		 		tv_compose_char_left.setText(Integer.toString(charLeft));
+		 	}
+		 	
+		 	@Override
+		 	public void beforeTextChanged(CharSequence s, int start, int count,
+		 			int after) {
+		 		// Fires right before text is changing
+		 	}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+			}
+		 });
 	}
 
 	@Override
