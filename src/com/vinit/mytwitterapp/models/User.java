@@ -1,8 +1,13 @@
 package com.vinit.mytwitterapp.models;
 
+import java.io.Serializable;
+
 import org.json.JSONObject;
 
-public class User extends BaseModel{
+import android.util.Log;
+
+public class User extends BaseModel implements Serializable{
+	private static final long serialVersionUID = 11L;
 
 	public String getName(){
 		return getString("name");
@@ -17,6 +22,7 @@ public class User extends BaseModel{
 		}
 
 	public String getProfileImageUrl(){
+		Log.d("DEBUG", this.toString());
 		return getString("profile_image_url");
 		}
 

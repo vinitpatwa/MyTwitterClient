@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.vinit.mytwitterapp.models.Tweet;
 
 public class ComposeActivity extends Activity {
 	
@@ -47,14 +48,20 @@ public class ComposeActivity extends Activity {
 			MyTwitterApp.getRestClient().postStatus(new JsonHttpResponseHandler(){
 				@Override
 				public void onSuccess(JSONObject jsonResult){
-					Log.d("DEBUG", jsonResult.toString());
+
+					Tweet newtweet = Tweet.fromJson(jsonResult);
+					
+					Intent i = new Intent();
+				
+					i.putExtra("tweet1",jsonResult.toString());
+					setResult(RESULT_OK, i);
+					finish();
+
 				}
 			}, tweetText);
 			
-			Toast.makeText(this, "Posted Tweet", Toast.LENGTH_SHORT).show();
-			Intent i = new Intent();
-	   		setResult(RESULT_OK, i);
-	   		finish();
+			
+
 		}
 	}
 
@@ -62,7 +69,7 @@ public class ComposeActivity extends Activity {
 	public void onCancel(View v){
 		
 		Intent i = new Intent();
-   		setResult(RESULT_OK, i);
+   		setResult(RESULT_CANCELED, i);
    		finish();
 	}
 

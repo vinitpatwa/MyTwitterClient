@@ -1,8 +1,12 @@
 package com.vinit.mytwitterapp;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -20,6 +24,7 @@ public class TimelineActivity extends Activity {
 	public long max_id = 0;
 	TweetAdapter adapter;
 	ListView lv_timeline;
+	int REQUEST_CODE = 123456;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -86,12 +91,32 @@ public class TimelineActivity extends Activity {
 		switch (item.getItemId()){
 		case R.id.compose:
 			Intent i = new Intent(this, ComposeActivity.class);
-			startActivity(i);
+			startActivityForResult(i, REQUEST_CODE);
 			return true;
 
 		default:
 			Toast.makeText(this,"something bad happened", Toast.LENGTH_SHORT).show();
 			return true;
+		}
+	}
+
+	protected void onActivityResult(int requestCode, int resultCode, Intent data){
+		if(requestCode == REQUEST_CODE){
+			if(resultCode == RESULT_OK){  
+				String tweetjson = data.getExtras().getString("tweet1");
+
+				JSONObject newTweet;
+				try {
+					newTweet = new JSONObject(tweetjson);
+					if(newTweet != null){
+						Tweet recentTweet = Tweet.fromJson(newTweet);
+						adapter.insert(recentTweet, 0);
+					}
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
