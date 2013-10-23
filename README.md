@@ -6,13 +6,13 @@ This is developed as part of Code Path Training
 Features:
 ---------
 1. User can sign in using OAuth login flow
-2. User can view last 25 tweets from their home timeline
+2. User can view last 25 tweets from their home timeline - #works for 20 right now
 3. User should be able to see the user, body and timestamp for tweet - need work
 4. User can compose a new tweet
 5. User can click a Compose icon in the Action Bar on the top right
-6. User will have a Compose view opened - TBD
-7. User can enter a message and hit a button to Post - TBD
-8. User should be taken back to home timeline with new tweet visible - TBD
+6. User will have a Compose view opened 
+7. User can enter a message and hit a button to Post 
+8. User should be taken back to home timeline with new tweet visible - #Tweet is not visible right now
 9. O: User can see a counter with total number of characters left for tweet - TBD
-10. User can load more tweets once they reach the bottom of the list - TBD
+10. User can load more tweets once they reach the bottom of the list
 11. Using "Load More" Button or "Lazy Endless" Scrolling

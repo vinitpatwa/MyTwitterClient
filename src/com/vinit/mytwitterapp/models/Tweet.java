@@ -9,6 +9,7 @@ import org.json.JSONObject;
 public class Tweet extends BaseModel{
 	
 	private User user;
+	public static long lowest_tweet_id = -1 ;
 
 	public User getUser(){
 		return user;
@@ -57,27 +58,23 @@ public class Tweet extends BaseModel{
 			}
 
 			Tweet tweet = Tweet.fromJson(tweetJson);
+			
 			if(tweet != null){
-				tweets.add(tweet);
+				
+				//If  lowest_tweet_id == tweet.getId
+				//Then don't add that tweet in tweets ArrayList
+				if(lowest_tweet_id != tweet.getId()){
+					tweets.add(tweet);
+				}
+				//when first tweet is added and lowest_tweet_id is -1
+				if(tweets.size() == 1 && lowest_tweet_id == -1){
+					lowest_tweet_id = tweet.getId();
+				}else{
+					if(lowest_tweet_id > tweet.getId()){lowest_tweet_id = tweet.getId();}
+				}
 			}
 		}
 		return tweets;
 	}
-
-	//	public String getUserName(){
-//
-//		return null;
-//	}
-//
-//	public String getFirstName(){
-//
-//		return null;
-//	}
-//
-//
-//	public String getTweet(){
-//
-//		return null;
-//	}
 
 }

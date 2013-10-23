@@ -17,11 +17,15 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.vinit.mytwitterapp.models.Tweet;
 
 public class TimelineActivity extends Activity {
+	public long max_id = 0;
+	TweetAdapter adapter;
+	ListView lv_timeline;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_timeline);
+		 lv_timeline = (ListView) findViewById(R.id.lv_timeline);
 		
 		MyTwitterApp.getRestClient().getHomeTimeline(new JsonHttpResponseHandler(){
 			
@@ -29,12 +33,47 @@ public class TimelineActivity extends Activity {
 			public void onSuccess(JSONArray jsonTweets){
 				ArrayList<Tweet> tweets = Tweet.fromJson(jsonTweets);
 				
-				ListView lv_timeline = (ListView) findViewById(R.id.lv_timeline);
-				TweetAdapter adapter = new TweetAdapter(getBaseContext(), tweets);
-				lv_timeline.setAdapter(adapter);
+//				ListView lv_timeline = (ListView) findViewById(R.id.lv_timeline);
+//				TweetAdapter adapter = new TweetAdapter(getBaseContext(), tweets);
+				processJson(tweets);
 			}
-		});
+		}, max_id);
+		
+		lv_timeline.setOnScrollListener(new EndlessScrollListener() {
+            @Override
+            public void onLoadMore(int page, int totalItemsCount) {
+            	
+            	someother();
+        // Whatever code is needed to append new items to your AdapterView
+        // probably sending out a network request and appending items to your adapter. 
+        // Use the page or the totalItemsCount to retrieve correct data.
+                //loadImages(totalItemsCount);  ----> do not multiply startIndex by 8 in this case! 
+               // loadImages(page); 
+            }
+    });
+		
 	}
+	
+	public void processJson(ArrayList<Tweet> tweets ){
+		adapter = new TweetAdapter(getBaseContext(), tweets);
+		lv_timeline.setAdapter(adapter);
+	}
+	
+	public void someother(){
+		MyTwitterApp.getRestClient().getHomeTimeline(new JsonHttpResponseHandler(){
+			
+			@Override
+			public void onSuccess(JSONArray jsonTweets){
+				ArrayList<Tweet> tweets = Tweet.fromJson(jsonTweets);
+				
+//				ListView lv_timeline = (ListView) findViewById(R.id.lv_timeline);
+//				TweetAdapter adapter = new TweetAdapter(getBaseContext(), tweets);
+				adapter.addAll(tweets);
+	//			processJson(tweets);
+			}
+		}, Tweet.lowest_tweet_id);
+	}
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

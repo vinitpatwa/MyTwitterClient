@@ -8,4 +8,38 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ComposeActivity" >
 
+    <EditText
+        android:id="@+id/et_compose_post_tweet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:maxLength="140" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/bt_compose_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_compose_post_tweet"
+        android:layout_below="@+id/et_compose_post_tweet"
+        android:onClick="onCancel"
+        android:layout_marginTop="20dp"
+        android:text="@string/bt_compose_cancel" />
+
+    <Button
+        android:id="@+id/bt_compose_tweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bt_compose_cancel"
+        android:layout_alignBottom="@+id/bt_compose_cancel"
+        android:layout_alignRight="@+id/et_compose_post_tweet"
+        android:onClick="onTweet"
+        android:text="@string/bt_compose_tweet" />
+
 </RelativeLayout>
