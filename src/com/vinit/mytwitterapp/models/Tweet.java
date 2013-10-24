@@ -11,6 +11,7 @@ public class Tweet extends BaseModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private User user;
 	public static long lowest_tweet_id = -1 ;
+	public static long largest_tweet_id = 0 ;
 
 	public User getUser(){
 		return user;
@@ -68,14 +69,34 @@ public class Tweet extends BaseModel implements Serializable{
 					tweets.add(tweet);
 				}
 				//when first tweet is added and lowest_tweet_id is -1
-				if(tweets.size() == 1 && lowest_tweet_id == -1){
+				if(tweets.size() == 1 && lowest_tweet_id == -1 && largest_tweet_id == 0){
 					lowest_tweet_id = tweet.getId();
+					largest_tweet_id = tweet.getId();
 				}else{
 					if(lowest_tweet_id > tweet.getId()){lowest_tweet_id = tweet.getId();}
+					if(largest_tweet_id < tweet.getId()){largest_tweet_id = tweet.getId();}
 				}
 			}
 		}
 		return tweets;
 	}
-
+	
+	
+	public static ArrayList<Tweet> fromJsonPullToRefresh(JSONArray jsonArray){
+		ArrayList<Tweet> tweets = new ArrayList<Tweet>(jsonArray.length());
+		for(int i = 0;i<jsonArray.length();i++){
+			JSONObject tweetJson = null;
+			try{
+				tweetJson=jsonArray.getJSONObject(i);
+			}catch(Exception e){
+				e.printStackTrace();
+				continue;
+			}
+			Tweet tweet = Tweet.fromJson(tweetJson);
+			if(tweet != null){
+					tweets.add(tweet);
+			}
+		}
+		return tweets;
+	}
 }

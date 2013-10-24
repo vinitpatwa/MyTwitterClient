@@ -16,3 +16,4 @@ Features completed:
 9. User can see a counter with total number of characters left for tweet
 10. User can load more tweets once they reach the bottom of the list
 11. Using "Load More" Button or "Lazy Endless" Scrolling
+12. Pull Down to Refresh
