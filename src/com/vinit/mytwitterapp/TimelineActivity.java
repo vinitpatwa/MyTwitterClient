@@ -156,6 +156,7 @@ public class TimelineActivity extends Activity {
 					newTweet = new JSONObject(tweetjson);
 					if(newTweet != null){
 						Tweet recentTweet = Tweet.fromJson(newTweet);
+						Tweet.largest_tweet_id = recentTweet.getId();
 						adapter.insert(recentTweet, 0);
 					}
 				} catch (JSONException e) {
