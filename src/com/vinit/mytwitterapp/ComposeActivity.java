@@ -46,12 +46,10 @@ public class ComposeActivity extends Activity {
 		 	@Override
 		 	public void beforeTextChanged(CharSequence s, int start, int count,
 		 			int after) {
-		 		// Fires right before text is changing
 		 	}
 
 			@Override
 			public void afterTextChanged(Editable s) {
-				// TODO Auto-generated method stub
 			}
 		 });
 	}
@@ -62,7 +60,6 @@ public class ComposeActivity extends Activity {
 		getMenuInflater().inflate(R.menu.compose, menu);
 		return true;
 	}
-
 	
 	public void onTweet(View v){
 		String tweetText = et_compose_post_tweet.getText().toString();
@@ -70,30 +67,19 @@ public class ComposeActivity extends Activity {
 			MyTwitterApp.getRestClient().postStatus(new JsonHttpResponseHandler(){
 				@Override
 				public void onSuccess(JSONObject jsonResult){
-
 					Tweet newtweet = Tweet.fromJson(jsonResult);
-					
 					Intent i = new Intent();
-				
 					i.putExtra("tweet1",jsonResult.toString());
 					setResult(RESULT_OK, i);
 					finish();
-
 				}
 			}, tweetText);
-			
-			
-
 		}
 	}
-
 	
 	public void onCancel(View v){
-		
 		Intent i = new Intent();
    		setResult(RESULT_CANCELED, i);
    		finish();
 	}
-
-	
 }

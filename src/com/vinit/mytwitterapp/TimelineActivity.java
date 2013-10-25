@@ -39,11 +39,8 @@ public class TimelineActivity extends Activity {
 			
 			@Override
 			public void onSuccess(JSONArray jsonTweets){
-	        	Log.d("DEBUG3","successCallTimeline");
 				ArrayList<Tweet> tweets = Tweet.fromJson(jsonTweets);
 				
-//				ListView lv_timeline = (ListView) findViewById(R.id.lv_timeline);
-//				TweetAdapter adapter = new TweetAdapter(getBaseContext(), tweets);
 				processJson(tweets);
 			}
 		}, max_id);
@@ -51,13 +48,7 @@ public class TimelineActivity extends Activity {
 		lv_timeline.setOnScrollListener(new EndlessScrollListener() {
             @Override
             public void onLoadMore(int page, int totalItemsCount) {
-            	Log.d("DEBUG4", "Calling loadmore");
             	someother();
-        // Whatever code is needed to append new items to your AdapterView
-        // probably sending out a network request and appending items to your adapter. 
-        // Use the page or the totalItemsCount to retrieve correct data.
-                //loadImages(totalItemsCount);  ----> do not multiply startIndex by 8 in this case! 
-               // loadImages(page); 
             }
     });
 		
@@ -69,7 +60,6 @@ public class TimelineActivity extends Activity {
                 // once the loading is done. This can be done from here or any
                 // place such as when the network request has completed successfully.
                 fetchTimelineAsync(0);
-             	Log.d("DEBUG3","ON REFRESH");
             }
         });
 		
@@ -78,61 +68,39 @@ public class TimelineActivity extends Activity {
     public void fetchTimelineAsync(int page) {
     	MyTwitterApp.getRestClient().getHomeTimeline(new JsonHttpResponseHandler(){
             public void onSuccess(JSONArray jsonTweets) {
-            	Log.d("DEBUG3","1");
 				ArrayList<Tweet> newTweets= new ArrayList<Tweet>();
-		     	Log.d("DEBUG3","2");
             	ArrayList<Tweet> tweets = Tweet.fromJsonPullToRefresh(jsonTweets);
-             	Log.d("DEBUG3","3");
             	long min=0;
             	long max=0;
-             	Log.d("DEBUG3","4");
             	for(int i=0;i<tweets.size();i++){
-                 	Log.d("DEBUG3","5");
             		Tweet t=tweets.get(i);
-                 	Log.d("DEBUG3","6");
             		if(t.getId() > Tweet.largest_tweet_id){
-            	     	Log.d("DEBUG3","7");
             			newTweets.add(t);
             		}
-                 	Log.d("DEBUG3","8");
             		if(i==0){
-            	     	Log.d("DEBUG3","9");
             			min=t.getId();
             			max=t.getId();
             		}else{
-            	     	Log.d("DEBUG3","10");
             			if(min > t.getId()){min = t.getId();}
             			if(max < t.getId()){max = t.getId();}
             			
             		}
-                 	Log.d("DEBUG3","11");
             	}
 
             	if(min > Tweet.largest_tweet_id && newTweets.size() != 0){
-                 	Log.d("DEBUG3","12");
             		Tweet.largest_tweet_id= max;
             		Tweet.lowest_tweet_id= min;
-                 	Log.d("DEBUG3","13");
             		adapter.clear();
             		adapter.addAll(newTweets);
-                 	Log.d("DEBUG3","14");
             	}else{
-                 	Log.d("DEBUG3","15");
             		if(max > Tweet.largest_tweet_id){
-
-            	     	Log.d("DEBUG3","16");
             	     	Tweet.largest_tweet_id= max;
             		}
             		for(int i=0;i<newTweets.size();i++){
-            	     	Log.d("DEBUG3","17");
             			adapter.insert(newTweets.get(i),0);
-            	     	Log.d("DEBUG3","18");
             		}
-                 	Log.d("DEBUG3","19");
-                 	
             	}
              	Log.d("DEBUG3","20 lowest:"+Tweet.lowest_tweet_id+" largest:"+Tweet.largest_tweet_id);
-             	
              	lv_timeline.onRefreshComplete();
             }
 
@@ -152,7 +120,6 @@ public class TimelineActivity extends Activity {
 			
 			@Override
 			public void onSuccess(JSONArray jsonTweets){
-	        	Log.d("DEBUG3","After LoadMore:"+jsonTweets.toString());
 				ArrayList<Tweet> tweets = Tweet.fromJson(jsonTweets);
 				adapter.addAll(tweets);
 			}

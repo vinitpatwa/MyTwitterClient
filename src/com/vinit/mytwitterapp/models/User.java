@@ -22,7 +22,6 @@ public class User extends BaseModel implements Serializable{
 		}
 
 	public String getProfileImageUrl(){
-		Log.d("DEBUG", this.toString());
 		return getString("profile_image_url");
 		}
 
@@ -44,7 +43,6 @@ public class User extends BaseModel implements Serializable{
 	
 	public static User fromJson(JSONObject json){
 		User u = new User();
-		
 		try{
 			u.jsonObject = json;
 		}catch(Exception e){
@@ -52,8 +50,4 @@ public class User extends BaseModel implements Serializable{
 		}
 		return u;
 	}
-	
-	
-
-	
 }
