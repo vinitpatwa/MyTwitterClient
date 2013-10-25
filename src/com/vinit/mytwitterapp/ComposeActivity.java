@@ -7,16 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.loopj.android.http.JsonHttpResponseHandler;
-import com.vinit.mytwitterapp.models.Tweet;
 
 public class ComposeActivity extends Activity {
 	
@@ -67,7 +63,6 @@ public class ComposeActivity extends Activity {
 			MyTwitterApp.getRestClient().postStatus(new JsonHttpResponseHandler(){
 				@Override
 				public void onSuccess(JSONObject jsonResult){
-					Tweet newtweet = Tweet.fromJson(jsonResult);
 					Intent i = new Intent();
 					i.putExtra("tweet1",jsonResult.toString());
 					setResult(RESULT_OK, i);
