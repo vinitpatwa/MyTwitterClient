@@ -33,26 +33,26 @@ public class TimelineActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_timeline);
-		 lv_timeline = (PullToRefreshListView) findViewById(R.id.lv_timeline);
-		
-		MyTwitterApp.getRestClient().getHomeTimeline(new JsonHttpResponseHandler(){
-			
-			@Override
-			public void onSuccess(JSONArray jsonTweets){
-				ArrayList<Tweet> tweets = Tweet.fromJson(jsonTweets);
-				
-				processJson(tweets);
-			}
-		}, max_id);
-		
-		lv_timeline.setOnScrollListener(new EndlessScrollListener() {
+        lv_timeline = (PullToRefreshListView) findViewById(R.id.lv_timeline);
+
+        MyTwitterApp.getRestClient().getHomeTimeline(null, new JsonHttpResponseHandler(){
+
+            @Override
+            public void onSuccess(JSONArray jsonTweets){
+                ArrayList<Tweet> tweets = Tweet.fromJson(jsonTweets);
+
+                processJson(tweets);
+            }
+        }, max_id);
+
+        lv_timeline.setOnScrollListener(new EndlessScrollListener() {
             @Override
             public void onLoadMore(int page, int totalItemsCount) {
-            	someother();
+                someother();
             }
-    });
-		
-		lv_timeline.setOnRefreshListener(new OnRefreshListener() {
+        });
+
+        lv_timeline.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh() {
                 // Your code to refresh the list contents
@@ -62,11 +62,11 @@ public class TimelineActivity extends Activity {
                 fetchTimelineAsync(0);
             }
         });
-		
-	}
+
+    }
 	
     public void fetchTimelineAsync(int page) {
-    	MyTwitterApp.getRestClient().getHomeTimeline(new JsonHttpResponseHandler(){
+    	MyTwitterApp.getRestClient().getHomeTimeline(null, new JsonHttpResponseHandler(){
             public void onSuccess(JSONArray jsonTweets) {
 				ArrayList<Tweet> newTweets= new ArrayList<Tweet>();
             	ArrayList<Tweet> tweets = Tweet.fromJsonPullToRefresh(jsonTweets);
@@ -116,7 +116,7 @@ public class TimelineActivity extends Activity {
 	}
 	
 	public void someother(){
-		MyTwitterApp.getRestClient().getHomeTimeline(new JsonHttpResponseHandler(){
+		MyTwitterApp.getRestClient().getHomeTimeline(null, new JsonHttpResponseHandler(){
 			
 			@Override
 			public void onSuccess(JSONArray jsonTweets){
@@ -135,10 +135,16 @@ public class TimelineActivity extends Activity {
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 		switch (item.getItemId()){
+
 		case R.id.compose:
-			Intent i = new Intent(this, ComposeActivity.class);
+            Intent i = new Intent(this, ComposeActivity.class);
 			startActivityForResult(i, REQUEST_CODE);
 			return true;
+
+            case R.id.profile:
+                Intent i2 = new Intent(this, ProfileActivity.class);
+                startActivityForResult(i2, REQUEST_CODE);
+                return true;
 
 		default:
 			Toast.makeText(this,"something bad happened", Toast.LENGTH_SHORT).show();

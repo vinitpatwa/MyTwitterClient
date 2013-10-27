@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    tools:context=".ProfileActivity" >
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/iv_profile_item_pic"
+        android:src="@drawable/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tv_profile_item_firstname"
+        android:id="@+id/tv_profile_item_firstname"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/iv_profile_item_pic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tv_profile_item_tweet"
+        android:id="@+id/tv_profile_item_tweet"
+        android:layout_below="@+id/tv_profile_item_firstname"
+        android:layout_alignLeft="@+id/tv_profile_item_firstname"
+        android:textStyle="normal"
+        />
+
+</RelativeLayout>

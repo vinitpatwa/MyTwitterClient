@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ProfileActivity" >
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/iv_profile_pic"
+        android:src="@drawable/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginLeft="5dp"
+        android:text="@string/tv_profile_firstname"
+        android:id="@+id/tv_profile_firstname"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/iv_profile_pic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/tv_profile_status"
+        android:id="@+id/tv_profile_status"
+        android:layout_below="@+id/tv_profile_firstname"
+        android:layout_alignLeft="@+id/tv_profile_firstname"
+        android:textStyle="normal"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/tv_profile_followers"
+        android:id="@+id/tv_profile_followers"
+        android:layout_below="@+id/iv_profile_pic"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/tv_profile_following"
+        android:id="@+id/tv_profile_following"
+        android:layout_alignTop="@+id/tv_profile_followers"
+        android:layout_toRightOf="@+id/tv_profile_followers" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_profile_status"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv_profile_followers"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

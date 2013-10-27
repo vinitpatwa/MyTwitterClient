@@ -4,7 +4,14 @@
         android:id="@+id/compose"
         android:orderInCategory="100"
         android:showAsAction="always"
-        android:icon="@drawable/twitcompose"
+        android:icon="@drawable/twitcomposenew"
         android:title="@string/compose"/>
+
+    <item
+        android:id="@+id/profile"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/profileimage"
+        android:title="@string/profile"/>
 
 </menu>

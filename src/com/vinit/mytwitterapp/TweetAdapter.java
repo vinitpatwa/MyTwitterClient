@@ -7,6 +7,7 @@ import com.vinit.mytwitterapp.models.Tweet;
 
 import android.content.Context;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +41,8 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
 	 	 ImageLoader.getInstance().displayImage(tweet.getUser().getProfileImageUrl(), iv_tweet_item_user_image);
 
 	 	 tv_tweet_item_firstname = (TextView) view.findViewById(R.id.tv_tweet_item_firstname); 
-		 String formattedName = "<b>"+tweet.getUser().getName() +"</b>" + "<small><font color='#777777>@"+tweet.getUser().getScreenName()+"</font></small>";
+		 String formattedName = "<b>"+tweet.getUser().getName() +"</b>" + "<small><font color='#777777'>@"+tweet.getUser().getScreenName()+"</font></small>";
+        Log.d("DEBUG3", formattedName);
 		 tv_tweet_item_firstname.setText(Html.fromHtml(formattedName));
 		  
 		 tv_tweet_item_tweet = (TextView) view.findViewById(R.id.tv_tweet_item_tweet);

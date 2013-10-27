@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/universal-image-loader-1.8.4-3aa39e69d08b4b790d46f94dbfd13156.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/codepath-oauth-0.2.4-5ce40b549548e130ab7b96040001da7f.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/activeandroid-3.0-d368795c05014cd2222f6c99c9901f36.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/android-async-http-1.4.3-9c1ed53e10e8a262842978b7a353354d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/codepath-utils-fee73df1aa4c9afc6df81170de55d4ca.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/pulltorefreshlistview-7b956c8c5dd88c454a626d5320976d21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/scribe-f4e4cd23d2166d13d17802ef39d0b7dc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/android-support-v4-ec7ffa5c55e14ab4f7fc740765775a55.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
