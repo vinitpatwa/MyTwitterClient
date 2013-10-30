@@ -42,38 +42,8 @@ public class TimelineActivity extends FragmentActivity implements ActionBar.TabL
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_timeline);
-//       lv_timeline = (PullToRefreshListView) findViewById(R.id.lv_timeline);
-//        fragmentTweets = (TweetsListFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentTweets);
 
-//        MyTwitterApp.getRestClient().getHomeTimeline(null, new JsonHttpResponseHandler(){
-//
-//            @Override
-//            public void onSuccess(JSONArray jsonTweets){
-//                ArrayList<Tweet> tweets = Tweet.fromJson(jsonTweets);
-//                fragmentTweets.getAdapter().addAll(tweets);
-////                processJson(tweets);
-//            }
-//        }, max_id);
-
-//        lv_timeline.setOnScrollListener(new EndlessScrollListener() {
-//            @Override
-//            public void onLoadMore(int page, int totalItemsCount) {
-//                someother();
-//            }
-//        });
-//
-//        lv_timeline.setOnRefreshListener(new OnRefreshListener() {
-//            @Override
-//            public void onRefresh() {
-//                // Your code to refresh the list contents
-//                // Make sure you call listView.onRefreshComplete()
-//                // once the loading is done. This can be done from here or any
-//                // place such as when the network request has completed successfully.
-//                fetchTimelineAsync(0);
-//            }
-//        });
         setupNavigationTabs();
-
     }
 
     public void setupNavigationTabs(){
@@ -128,7 +98,6 @@ public class TimelineActivity extends FragmentActivity implements ActionBar.TabL
             			adapter.insert(newTweets.get(i),0);
             		}
             	}
-             	Log.d("DEBUG3","20 lowest:"+Tweet.lowest_tweet_id+" largest:"+Tweet.largest_tweet_id);
              	lv_timeline.onRefreshComplete();
             }
 

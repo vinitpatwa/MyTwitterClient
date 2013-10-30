@@ -19,17 +19,14 @@ public class MentionsFragment extends TweetsListFragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("DEBUG4", "will start");
 
         MyTwitterApp.getRestClient().getMentions(new JsonHttpResponseHandler() {
 
             @Override
             public void onSuccess(JSONArray jsonTweets) {
-                Log.d("DEBUG3", "It came back");
                 ArrayList<Tweet> tweets = Tweet.fromJson(jsonTweets);
                 getAdapter().addAll(tweets);
-//                processJson(tweets);
-                Log.d("DEBUG3", "FINAL DONE HERE");
+
             }
         });
 

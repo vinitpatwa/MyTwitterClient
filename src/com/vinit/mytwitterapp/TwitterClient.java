@@ -54,7 +54,29 @@ public class TwitterClient extends OAuthBaseClient {
         	rParams.put("max_id",Long.toString(max_id) );
         	client.get(url,rParams, handler);
     	}
-    	
+
+    }
+
+    public void getUserTimeline(String screenName, AsyncHttpResponseHandler handler , long max_id){
+        String currentAPI="statuses/user_timeline.json";
+
+        String url = getApiUrl(currentAPI);
+        if(max_id == 0){
+            RequestParams rParams = new RequestParams();
+            if(screenName != null){
+               rParams.put("screen_name",screenName);
+            }
+            rParams.put("count","25");
+            client.get(url,rParams, handler);
+        }else{
+            RequestParams rParams = new RequestParams();
+            if(screenName != null){
+                rParams.put("screen_name",screenName);
+            }
+            rParams.put("count","25");
+            rParams.put("max_id",Long.toString(max_id) );
+            client.get(url,rParams, handler);
+        }
     }
     
     public void postStatus(AsyncHttpResponseHandler handler, String status){
@@ -65,10 +87,8 @@ public class TwitterClient extends OAuthBaseClient {
     }
 
     public void getMentions(AsyncHttpResponseHandler handler){
-        Log.d("DEBUG3", "in Get Mentions");
         String url = getApiUrl("statuses/mentions_timeline.json");
         client.get(url, null, handler);
-        Log.d("DEBUG3", "Done here");
     }
     
     public void getInterestingnessList(AsyncHttpResponseHandler handler) {

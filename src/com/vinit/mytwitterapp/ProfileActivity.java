@@ -1,13 +1,17 @@
 package com.vinit.mytwitterapp;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -42,7 +46,13 @@ public class ProfileActivity extends Activity {
         tv_profile_following= (TextView) findViewById(R.id.tv_profile_following);
         lv_profile_status = (ListView) findViewById(R.id.lv_profile_status);
 
-        MyTwitterApp.getRestClient().getHomeTimeline("user_timeline.json", new JsonHttpResponseHandler(){
+        String screenName = null;
+
+        if(getIntent().hasExtra("screenName")){
+         screenName = getIntent().getStringExtra("screenName");
+        }
+
+        MyTwitterApp.getRestClient().getUserTimeline(screenName, new JsonHttpResponseHandler(){
 
             @Override
             public void onSuccess(JSONArray jsonTweets){
