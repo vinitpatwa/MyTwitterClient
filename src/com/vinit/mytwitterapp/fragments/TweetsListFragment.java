@@ -41,21 +41,21 @@ public class TweetsListFragment extends Fragment{
         lv_timeline = (ListView) getActivity().findViewById(R.id.lv_timeline);
         lv_timeline.setAdapter(adapter);
 
-        lv_timeline.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-
-                //ASK NATHAN
-                Tweet currentItem = (Tweet) lv_timeline.getItemAtPosition(position+1);
-
-                Log.d("DEBUG4", lv_timeline.getItemAtPosition(position+1).toString());
-                Log.d("DEBUG4", currentItem.getUser().getScreenName());
-
-                Intent i = new Intent(getActivity(), ProfileActivity.class);
-                i.putExtra("screenName",currentItem.getUser().getScreenName() );
-                startActivity(i);
-            }
-        });
+//        lv_timeline.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+//
+//                //ASK NATHAN
+//                Tweet currentItem = (Tweet) lv_timeline.getItemAtPosition(position+1);
+//
+//                Log.d("DEBUG4", lv_timeline.getItemAtPosition(position+1).toString());
+//                Log.d("DEBUG4", currentItem.getUser().getScreenName());
+//
+//                Intent i = new Intent(getActivity(), ProfileActivity.class);
+//                i.putExtra("screenName",currentItem.getUser().getScreenName() );
+//                startActivity(i);
+//            }
+//        });
     }
 
     public TweetAdapter getAdapter(){

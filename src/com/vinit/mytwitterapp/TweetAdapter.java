@@ -6,6 +6,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.vinit.mytwitterapp.models.Tweet;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,7 +21,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
 	ImageView iv_tweet_item_user_image;
 	TextView tv_tweet_item_firstname;
 	TextView tv_tweet_item_tweet;
-	
+    Tweet tweet;
 
 	public TweetAdapter(Context context, ArrayList<Tweet> tweets) {
 		super(context, 0, tweets);
@@ -35,14 +36,25 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
 			
 		}
 		
-	 	Tweet tweet= getItem(position);
+	 	 tweet= getItem(position);
+
 	
 	 	 iv_tweet_item_user_image = (ImageView) view.findViewById(R.id.iv_tweet_item_user_image);
 	 	 ImageLoader.getInstance().displayImage(tweet.getUser().getProfileImageUrl(), iv_tweet_item_user_image);
+         iv_tweet_item_user_image.setTag(tweet.getUser().getScreenName());
+         iv_tweet_item_user_image.setOnClickListener(new View.OnClickListener() {
+             @Override
+            public void onClick(View v)
+            {
+                Log.d("DEBUG4", v.getTag().toString());
+                Intent i = new Intent(getContext(), ProfileActivity.class);
+                i.putExtra("screenName", v.getTag().toString() );
+                getContext().startActivity(i);
+            }
+        });
 
 	 	 tv_tweet_item_firstname = (TextView) view.findViewById(R.id.tv_tweet_item_firstname); 
 		 String formattedName = "<b>"+tweet.getUser().getName() +"</b>" + "<small><font color='#777777'>@"+tweet.getUser().getScreenName()+"</font></small>";
-        Log.d("DEBUG3", formattedName);
 		 tv_tweet_item_firstname.setText(Html.fromHtml(formattedName));
 		  
 		 tv_tweet_item_tweet = (TextView) view.findViewById(R.id.tv_tweet_item_tweet);
