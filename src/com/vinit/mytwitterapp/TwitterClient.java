@@ -63,7 +63,13 @@ public class TwitterClient extends OAuthBaseClient {
     	rParams.put("status",status );
     	client.post(url, rParams, handler);
     }
-    
+
+    public void getMentions(AsyncHttpResponseHandler handler){
+        Log.d("DEBUG3", "in Get Mentions");
+        String url = getApiUrl("statuses/mentions_timeline.json");
+        client.get(url, null, handler);
+        Log.d("DEBUG3", "Done here");
+    }
     
     public void getInterestingnessList(AsyncHttpResponseHandler handler) {
         String apiUrl = getApiUrl("?nojsoncallback=1&method=flickr.interestingness.getList");
