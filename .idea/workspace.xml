@@ -80,23 +80,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TwitterClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/TwitterClient.java">
+      <file leaf-file-name="TweetsListFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/TweetsListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="0" selection-start="3649" selection-end="3649" vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="1425">
+            <state line="23" column="13" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="780">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/ProfileActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1215">
-              <folding>
-                <element signature="e#1803#2897#0" expanded="true" />
-                <element signature="e#2886#2887#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -105,36 +93,50 @@
         <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/MentionsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="26" column="0" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#559#811#0" expanded="false" />
-                <element signature="e#800#801#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TweetsListFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/TweetsListFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1261" selection-end="1988" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="780">
-              <folding>
-                <marker date="1383169888000" expanded="true" signature="1304:1468" placeholder="(adapterView, view, position, l) -&gt; {" />
-                <marker date="1383169888000" expanded="true" signature="1969:1986" placeholder="}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TweetAdapter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TweetAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/TweetAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="9" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.35650888" vertical-offset="194" max-vertical-offset="870">
+            <state line="47" column="13" selection-start="1517" selection-end="1517" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="855">
               <folding>
-                <element signature="e#1412#1786#0" expanded="true" />
-                <element signature="e#1775#1776#0" expanded="true" />
+                <element signature="e#1412#1730#0" expanded="true" />
+                <element signature="e#1719#1720#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComposeActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/ComposeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="77" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="1065">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimelineFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/TimelineFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="0" selection-start="1115" selection-end="1961" vertical-scroll-proportion="0.48816568" vertical-offset="0" max-vertical-offset="735">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_tweets_list.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/fragment_tweets_list.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="32" selection-start="489" selection-end="489" vertical-scroll-proportion="-6.111111" vertical-offset="0" max-vertical-offset="315">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -153,58 +155,18 @@
       <file leaf-file-name="TimelineActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/TimelineActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="37" selection-start="1188" selection-end="1202" vertical-scroll-proportion="-5.769231" vertical-offset="0" max-vertical-offset="2550">
+            <state line="168" column="17" selection-start="4894" selection-end="5388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2580">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProfileAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/ProfileAdapter.java">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+            <state line="27" column="42" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/models/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="31" selection-start="510" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="975">
-              <folding>
-                <element signature="e#422#423#0" expanded="false" />
-                <element signature="e#446#447#0" expanded="false" />
-                <element signature="e#470#471#0" expanded="false" />
-                <element signature="e#492#493#0" expanded="false" />
-                <element signature="e#525#526#0" expanded="false" />
-                <element signature="e#556#557#0" expanded="false" />
-                <element signature="e#594#595#0" expanded="false" />
-                <element signature="e#631#632#0" expanded="false" />
-                <element signature="e#679#680#0" expanded="false" />
-                <element signature="e#727#728#0" expanded="false" />
-                <element signature="e#756#757#0" expanded="false" />
-                <element signature="e#790#791#0" expanded="false" />
-                <element signature="e#823#824#0" expanded="false" />
-                <element signature="e#858#859#0" expanded="false" />
-                <element signature="e#891#892#0" expanded="false" />
-                <element signature="e#924#925#0" expanded="false" />
-                <element signature="method#getFollowingCount#0;class#User#0" expanded="false" />
-                <element signature="method#getDescription#0;class#User#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_timeline.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_timeline.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="43" selection-start="866" selection-end="884" vertical-scroll-proportion="-12.222222" vertical-offset="0" max-vertical-offset="510">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -218,22 +180,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/activity_profile.xml" />
         <option value="$PROJECT_DIR$/src/com/vinit/mytwitterapp/models/User.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/menu/compose_btn.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/TimelineFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_timeline.xml" />
         <option value="$PROJECT_DIR$/res/layout/profile_item.xml" />
         <option value="$PROJECT_DIR$/res/layout/fragment_tweets_list.xml" />
         <option value="$PROJECT_DIR$/src/com/vinit/mytwitterapp/TwitterClient.java" />
         <option value="$PROJECT_DIR$/src/com/vinit/mytwitterapp/ProfileActivity.java" />
         <option value="$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/MentionsFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/vinit/mytwitterapp/TimelineActivity.java" />
         <option value="$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/TweetsListFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/tweet_item.xml" />
         <option value="$PROJECT_DIR$/src/com/vinit/mytwitterapp/TweetAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/vinit/mytwitterapp/TimelineActivity.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/TimelineFragment.java" />
       </list>
     </option>
   </component>
@@ -585,7 +547,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29032257" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29032257" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -639,48 +601,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="28" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/app/FragmentActivity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="0" selection-start="5137" selection-end="5137" vertical-scroll-proportion="0.9079646" vertical-offset="1242" max-vertical-offset="1845" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/profile_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="293" selection-end="293" vertical-scroll-proportion="0.1764706" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../PullToRefreshListView/src/eu/erikw/PullToRefreshListView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="509" column="0" selection-start="17959" selection-end="17959" vertical-scroll-proportion="0.0" vertical-offset="6770" max-vertical-offset="7665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_tweets_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="489" selection-end="489" vertical-scroll-proportion="-6.111111" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/TimelineFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <folding />
         </state>
       </provider>
@@ -718,17 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/MentionsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#559#811#0" expanded="false" />
-            <element signature="e#800#801#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/ProfileActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="0" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215">
@@ -749,27 +661,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/TimelineActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="37" selection-start="1188" selection-end="1202" vertical-scroll-proportion="-5.769231" vertical-offset="0" max-vertical-offset="2550">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/ProfileAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="13" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/TweetsListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1261" selection-end="1988" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="780">
-          <folding>
-            <marker date="1383169888000" expanded="true" signature="1304:1468" placeholder="(adapterView, view, position, l) -&gt; {" />
-            <marker date="1383169888000" expanded="true" signature="1969:1986" placeholder="}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -785,11 +680,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/TweetAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="9" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.35650888" vertical-offset="194" max-vertical-offset="870">
+        <state line="47" column="13" selection-start="1517" selection-end="1517" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="855">
           <folding>
-            <element signature="e#1412#1786#0" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
+            <element signature="e#1412#1730#0" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/ComposeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="77" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="1065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_tweets_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="32" selection-start="489" selection-end="489" vertical-scroll-proportion="-6.111111" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/app/Fragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="16" selection-start="6001" selection-end="6001" vertical-scroll-proportion="0.34562212" vertical-offset="2010" max-vertical-offset="3975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/MentionsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/TweetsListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/TimelineActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="17" selection-start="4894" selection-end="5388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2580">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="42" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vinit/mytwitterapp/fragments/TimelineFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1115" selection-end="1961" vertical-scroll-proportion="0.48816568" vertical-offset="0" max-vertical-offset="735">
+          <folding />
         </state>
       </provider>
     </entry>

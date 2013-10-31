@@ -46,7 +46,6 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
              @Override
             public void onClick(View v)
             {
-                Log.d("DEBUG4", v.getTag().toString());
                 Intent i = new Intent(getContext(), ProfileActivity.class);
                 i.putExtra("screenName", v.getTag().toString() );
                 getContext().startActivity(i);

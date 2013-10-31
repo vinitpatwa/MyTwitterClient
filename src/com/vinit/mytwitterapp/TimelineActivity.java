@@ -149,22 +149,24 @@ public class TimelineActivity extends FragmentActivity implements ActionBar.TabL
 		}
 	}
 
+    @Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data){
 		if(requestCode == REQUEST_CODE){
 			if(resultCode == RESULT_OK){
-				String tweetjson = data.getExtras().getString("tweet1");
-
-				JSONObject newTweet;
-				try {
-					newTweet = new JSONObject(tweetjson);
-					if(newTweet != null){
-						Tweet recentTweet = Tweet.fromJson(newTweet);
-						Tweet.largest_tweet_id = recentTweet.getId();
-						adapter.insert(recentTweet, 0);
-					}
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
+                Log.d("DEBUG4","calling fragment");
+//                TimelineFragment tlf =    new TimelineFragment();
+//				String tweetjson = data.getExtras().getString("tweet1");
+//				JSONObject newTweet;
+//				try {
+//					newTweet = new JSONObject(tweetjson);
+//					if(newTweet != null){
+//						Tweet recentTweet = Tweet.fromJson(newTweet);
+//						Tweet.largest_tweet_id = recentTweet.getId();
+//                        tlf.getAdapter().insert(recentTweet, 0);
+//					}
+//				} catch (JSONException e) {
+//					e.printStackTrace();
+//				}
 			}
 		}
 	}
